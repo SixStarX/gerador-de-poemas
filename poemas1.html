@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Poemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e60067;
+        }
+        #poema {
+            margin-top: 20px;
+            font-style: italic;
+            white-space: pre-line;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Poemas</h1>
+        <button onclick="gerarPoema()">Gerar Poema</button>
+        <p id="poema"></p>
+    </div>
+
+    <script>
+        const poemas = [
+            "-No rio que canta, o salmão desliza,\nEm prateado brilho, a luz se fixa.",
+            "-Contra a corrente, firme e forte,\nSegue seu rumo, desafiando a morte.",
+            "-Milhares nadam, um só corpo,\nOnda viva, sem esforço.",
+            "-Refletem cores ao luar,\nPeixes que sabem onde estar.",
+            "-Desde o oceano, voltam ao lar,\nSubindo os rios sem descansar.",
+            "-O tempo os chama, a vida exige,\nNa água doce, a linhagem revive.",
+            "-Laranja e prata, cores se vão,\nNo grande salto, a decisão.",
+            "-Contra o destino, seguem adiante,\nNada os detém, nem mesmo um gigante.",
+            "-Quem pode contar o cardume em sua pressa?\nOndas rosadas, vigor sem promessa.",
+            "-Nadam em uníssono, um só pensamento,\nSomem nas águas como um firmamento.",
+            "-Tanta jornada, tantos perigos,\nÁguias espreitam, ursos famintos.",
+            "-Mas nada os faz recuar no momento,\nA vida os chama num só movimento.",
+            "-Eles conhecem o ciclo perfeito,\nO mar os leva, o rio os tem dentro.",
+            "-Nascem, partem, retornam sempre,\nUm coração que nunca mente.",
+            "-No fim do ciclo, o corpo exausto,\nDesova feita, descanso aos passos.",
+            "-Dão seu legado às águas frias,\nE a vida segue, nova e viva.",
+            "-Aurora dança sobre a corrente,\nOs peixes brilham, sempre valentes.",
+            "-Nadam nas sombras do gelo antigo,\nFortes e livres, sem nenhum perigo.",
+            "-Se estrelas nadassem nos rios da Terra,\nBrilhariam como salmões na guerra.",
+            "-Guerreiros das águas, sem medo ou dor,\nSeguem nadando, fiéis ao amor.",
+        ];
+
+        function gerarPoema() {
+            let poemaAleatorio = poemas[Math.floor(Math.random() * poemas.length)];
+            document.getElementById("poema").innerText = poemaAleatorio;
+        }
+    </script>
+</body>
+</html>
